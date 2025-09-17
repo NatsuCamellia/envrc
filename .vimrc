@@ -3,14 +3,17 @@
 filetype on
 filetype plugin on
 filetype indent on
+language zh_TW.UTF-8
+set clipboard=unnamedplus,unnamed,autoselect
 syntax enable
 set nocompatible
-set number
-set ts=4
+" Relative line number
+set rnu
+" set ts=4
 set expandtab
 set autoindent
-set shiftwidth=4
-set nobackup
+" set shiftwidth=4
+" set nobackup
 set ruler
 set bg=dark
 set mouse=a
