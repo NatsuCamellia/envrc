@@ -8,6 +8,7 @@ set clipboard=unnamedplus,unnamed,autoselect
 syntax enable
 set nocompatible
 " Relative line number
+set nu
 set rnu
 " set ts=4
 set expandtab
