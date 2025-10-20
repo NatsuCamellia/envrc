@@ -81,7 +81,7 @@ return {
         --  For example, in C this would take you to the header.
         map('grD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
-        map('<leader>f', vim.lsp.buf.format, '[F]ormat Buffer')
+        map('<leader>fm', vim.lsp.buf.format, '[F]or[m]at Buffer')
 
         -- Fuzzy find all the symbols in your current document.
         --  Symbols are things like variables, functions, types, etc.
@@ -195,7 +195,6 @@ return {
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 
-    local nproc = vim.fn.systemlist("nproc")[1] -- Note: Lua's index starts from 1
     local cpu_info = vim.loop.cpu_info()
     local cpu_cores = #cpu_info
     local servers = {
