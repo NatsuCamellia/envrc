@@ -196,12 +196,14 @@ return {
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 
     local nproc = vim.fn.systemlist("nproc")[1] -- Note: Lua's index starts from 1
+    local cpu_info = vim.loop.cpu_info()
+    local cpu_cores = #cpu_info
     local servers = {
       clangd = {
         cmd = {
           "clangd",
           "--header-insertion=never",
-          "-j=" .. nproc,
+          "-j=" .. cpu_cores,
           "--completion-style=detailed",
           "--function-arg-placeholders",
           "--rename-file-limit=0",
@@ -210,6 +212,7 @@ return {
         },
         filetypes = { "c", "cpp", "objc", "objcpp" },
       },
+      rust_analyzer = {},
       lua_ls = {
         -- cmd = { ... },
         -- filetypes = { ... },
