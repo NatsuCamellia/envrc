@@ -24,3 +24,19 @@ The `install.sh` will install p10k at `~/powerlevel10k` and then sourced in `.zs
 ## Neovim
 
 The config is in `.config/nvim`.
+
+### Clangd LSP
+
+**Installing `clangd`**: On **aarch64 Ubuntu**, Mason is unable to install `clangd` automatically. We have to install it manually and trick Mason:
+
+```
+$ ln -s ~/opt/LLVM-21.1.0-Linux-ARM64/bin/clangd ~/.local/share/nvim/mason/bin/clangd
+$ mkdir ~/.local/share/nvim/mason/packages/clangd
+```
+
+**Setup `clangd` for Linux kernel**: 
+
+1. Install `NatsuCamellia/envrc` to get Neovim config
+2. `yes "" | make defconfig`
+3. `yes "" | make CC=/home/cqwang/opt/LLVM-21.1.0-Linux-ARM64/bin/clang -j$(nproc)`
+4. `python3 scripts/clang-tools/gen_compile_commands.py`
