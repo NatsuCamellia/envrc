@@ -6,6 +6,13 @@ This repository contains my configurations for Zsh and other tools. You can inst
 $ ./install.sh
 ```
 
+## Prerequisited
+
+1. Zshell
+2. Neovim
+3. Tmux
+4. Clangd (C language server from LLVM)
+
 ## Zsh and Powerlevel10k Theme
 
 ### `.zshrc`
@@ -42,3 +49,7 @@ $ mkdir ~/.local/share/nvim/mason/packages/clangd
 2. `yes "" | make defconfig`
 3. `yes "" | make CC=/home/cqwang/opt/LLVM-21.1.0-Linux-ARM64/bin/clang -j$(nproc)`
 4. `python3 scripts/clang-tools/gen_compile_commands.py`
+
+## Tmux
+
+After `install.sh`, pressed `<C-Space> I` to install the plugins.
