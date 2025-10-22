@@ -53,3 +53,9 @@ $ mkdir ~/.local/share/nvim/mason/packages/clangd
 ## Tmux
 
 After `install.sh`, pressed `<C-Space> I` to install the plugins.
+
+## Remote Clipboard
+
+When you copy text on a remote server, the text will go into your local clipboard **if your terminal supports OSC52**. Sadly, our beloved macOS Terminal.app doesn't support this, and there are two workarounds:
+1. Use [iTerm2](https://iterm2.com), which supports OSC52.
+2. Run Zsh/Tmux inside [osc52pty](https://github.com/roy2220/osc52pty). After installation, open Terminal.app settings, in Profiles > Shell, add `osc52pty tmux` (`tmux` can be replaced with `zsh`, etc.) to "Run command".
