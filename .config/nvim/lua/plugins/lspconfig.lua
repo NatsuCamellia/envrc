@@ -198,6 +198,7 @@ return {
     local cpu_info = vim.loop.cpu_info()
     local cpu_cores = #cpu_info
     local servers = {
+      basedpyright = {},
       clangd = {
         cmd = {
           "clangd",
