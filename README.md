@@ -11,7 +11,7 @@ This repository contains my configurations for the following programs:
 
 ---
 
-## Prerequisited
+## Prerequisite
 
 1. Zsh
 2. Neovim (0.11.0 and later, for LSP support)
@@ -24,7 +24,7 @@ You can install these with:
 
 ```sh
 # On Ubuntu, (Neovim may not be new enough, you may need to install it from tarball manually)
-sudo apt install zsh neovim tmux clangd ripgrep gcc
+sudo apt install zsh neovim tmux clangd ripgrep fd-find gcc
 
 # On macOS (I'm not sure if the built-in clang works, but I use gcc)
 brew install neovim tmux ripgrep fd
