@@ -114,3 +114,9 @@ The current solution is to paste with `C-V` directly.
 Sadly, our beloved macOS Terminal.app doesn't support this, and there are two workarounds:
 1. Use [iTerm2](https://iterm2.com), which supports OSC52. (I tried iTerm2 and found it's good in terms of modern functionalities.)
 2. Run Zsh/Tmux inside [osc52pty](https://github.com/roy2220/osc52pty). After installation, open Terminal.app settings, in Profiles > Shell, add `osc52pty tmux` (`tmux` can be replaced with `zsh`, etc.) to "Run command".
+
+### Ubuntu: python3 failed with exit code 1 and signal 0.
+
+```
+sudo apt install python3-venv
+```
