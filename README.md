@@ -43,7 +43,7 @@ source <repo_path>/.zshrc
 For the remaining, run:
 
 ```
-$ ./install.sh
+./install.sh
 ```
 
 For Tmux, press `<C-Space> I` when you first run Tmux to install the plugins.
@@ -86,7 +86,7 @@ mkdir ~/.local/share/nvim/mason/packages/clangd
 
 ```
 yes "" | make defconfig
-yes "" | make CC=/home/cqwang/opt/LLVM-21.1.0-Linux-ARM64/bin/clang -j$(nproc)
+yes "" | make CC=clang -j$(nproc)
 python3 scripts/clang-tools/gen_compile_commands.py
 ```
 
