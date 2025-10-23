@@ -1,5 +1,7 @@
 # envrc
 
+<img width="2032" height="1161" alt="Demo" src="https://github.com/user-attachments/assets/a30c43e6-5208-4c66-97d5-7f415b613de5" />
+
 This repository contains my configurations for the following programs:
 
 - Zsh
