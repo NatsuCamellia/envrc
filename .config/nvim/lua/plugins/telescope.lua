@@ -24,7 +24,6 @@ return { -- Fuzzy Finder (files, lsp, etc)
       end,
     },
     { "nvim-telescope/telescope-ui-select.nvim" },
-    { "nvim-telescope/telescope-file-browser.nvim" },
 
     -- Useful for getting pretty icons, but requires a Nerd Font.
     { "nvim-tree/nvim-web-devicons",               enabled = vim.g.have_nerd_font },
@@ -108,10 +107,5 @@ return { -- Fuzzy Finder (files, lsp, etc)
     vim.keymap.set("n", "<leader>sn", function()
       builtin.find_files({ cwd = vim.fn.stdpath("config") })
     end, { desc = "[S]earch [N]eovim files" })
-
-    -- Telescope File Browser Extension
-    vim.keymap.set("n", "<leader>fb", function()
-      require("telescope").extensions.file_browser.file_browser()
-    end, { desc = "[F]ile [B]rowser" })
   end,
 }
